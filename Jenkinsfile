@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Clean') {
             steps {
-                bat "dotnet clean"
+                bat "${env.dotnet} clean"
             }
         }
     }
