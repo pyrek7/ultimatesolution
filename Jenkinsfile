@@ -1,8 +1,8 @@
 pipeline {
     agent any
     environment {
-  gg = 'C:\\Program Files\\dotnet\\dotnet.exe'
-              }
+        gg = 'C:\\Program Files\\dotnet\\dotnet.exe'
+    }
     stages {
         stage('Build') {
             steps {
