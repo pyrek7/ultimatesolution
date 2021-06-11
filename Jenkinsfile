@@ -1,22 +1,22 @@
 pipeline {
     agent any
     environment {
-        gg = 'C:\\Program Files\\dotnet\\dotnet.exe'
-    }
+  dotnet = 'C:\\dotnet\\dotnet.exe'
+              }
     stages {
         stage('Build') {
             steps {
-               echo "Hello ${env.gg}"
+               bat 'dotnet build --configuration Release'
             }
         }
         stage('Run') {
             steps {
-                echo "Hello ${env.gg}"
+                bat 'dotnet run'
             }
         }
-        stage('Deploy') {
+        stage('Clean') {
             steps {
-               echo "Hello ${env.gg}"
+                echo 'dotnet clean'
             }
         }
     }
