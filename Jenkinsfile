@@ -6,17 +6,17 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-               bat 'gg build --configuration Release'
+               echo "Hello ${env.gg}"
             }
         }
         stage('Run') {
             steps {
-                bat 'gg run'
+                echo "Hello ${env.gg}"
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+               echo "Hello ${env.gg}"
             }
         }
     }
