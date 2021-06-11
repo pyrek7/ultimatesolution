@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-               bat '${env.dotnet} build --configuration Release'
+               bat ${env.dotnet}' build --configuration Release'
             }
         }
         stage('Run') {
