@@ -6,17 +6,17 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-               bat ${env.dotnet}' build --configuration Release'
+               bat "${env.dotnet} build --configuration Release"
             }
         }
         stage('Run') {
             steps {
-                bat '${env.dotnet} run'
+                bat "${env.dotnet} run"
             }
         }
         stage('Clean') {
             steps {
-                bat '${env.dotnet} clean'
+                bat "${env.dotnet} clean"
             }
         }
     }
